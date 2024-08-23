@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<body>
+
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Mining Away</title>
+    <meta name="author" content="Esra Dijures">
+
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <header id="one">
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light fixed-top" id="nav-vision" style="z-index: 100; padding: 10px">
+      <div class="container-fluid" id="burt">
+        <a class="navbar-brand" id="nav-word" href="#">
+          <img class="logo" src="images/minecraft-logo.png">
+        </a>
+        <button class="navbar-toggler" id="but" type="button">
+          <!--Navbar Button Image-->
+          <img class="navbar-toggler-icon" src="./images/burger-menu-svgrepo-com.svg" />
+        </button>
+
+        <script>
+          //Javascript for toggling the navbar and dimming the background through an hambuger button
+          //event listener
+
+          //Gets the button element
+          var toggler = document.getElementsByClassName('navbar-toggler')[0];
+
+          //Add the event listener to the button
+          toggler.addEventListener('click', function () {
+            toggleDim();
+          });
+
+          function toggleDim() {
+            var dimmer = document.getElementById('dimmer');
+            var navbarItems = document.getElementById('navbarItems');
+
+            //Check if the navbar is open or closed though the element's classes
+            if (navbarItems.classList.contains('navbarOpen')) {
+              navbarItems.classList.remove('navbarOpen');
+              navbarItems.classList.add('navbarClosed');
+
+            } else {
+              navbarItems.classList.add('navbarOpen');
+              navbarItems.classList.remove('navbarClosed');
+            }
+
+            //Check if the dimmer is dimmed or not through the element's classes
+            if (dimmer.classList.contains('contentDimmed')) {
+              dimmer.classList.remove('contentDimmed');
+            } else {
+              dimmer.classList.add('contentDimmed');
+            }
+          }
+
+        </script>
+      </div>
+    </nav>
+
+    <!-- Navbar Items -->
+    <div class="container navbarItems navbarClosed" id="navbarItems" style="z-index: 100; top:60px">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#top">TOP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#one">PART ONE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#two">PART TWO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#three">PART THREE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#four">PART FOUR</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index2.html"> PAGE TWO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index3.html">PAGE THREE</a>
+        </li>
+    </div>
+
+  </header>
+  <div id="dimmer" onclick="toggleDim()"></div> <!-- Dimmer for dimming the background -->
+  <!--extend the header because the navbar was covering up the most of the  -->
+
+  <!--- just for the header to have more screen space--->
+  <nav>
+    <img class="logo" src="images/ROG - Logo.png">
+  </nav>
+  
+  <div id="headerImage" style="background-image: url('images/ROG - Logo.png');" class="container-fluid">
+  </div>
+
+  <script>
+    //Colour -> The colour that the background will change to
+    //Timer -> The time it takes for the background to change
+    //TargetID -> The ID of the object that the background will change
+    //OutDelay -> The time it takes for the background to change back to the original colour
+    function backgroundChange(bgColour, timer, targetID, fgImage) {
+
+      var targetObj = document.getElementById(targetID);
+
+      var toggled = false;
+      //Set the object that the event listener will be added to change the
+      //background colour
+      setTimeout(function(){
+        targetObj.style.backgroundColor = bgColour;
+        toggled = true;
+        if(fgImage != null){
+          targetObj.style.backgroundImage = "url(" + fgImage + ")";
+        }
+      }, timer);
+    }
+
+    var currrentBackground = 0;
+
+    function playBackgorundChange(){
+      setInterval(function(){
+        switch(currrentBackground){
+          case 0:
+            backgroundChange("white", 0, "headerImage", "images/caveout.png");
+            currrentBackground++;
+            break;
+          case 1:
+            backgroundChange("white", 0, "headerImage", "images/cube.png");
+            currrentBackground++;
+            break;
+          case 2:
+            backgroundChange("white", 0, "headerImage", "images/sunshine.png");
+            currrentBackground++;
+            break;
+          case 3:
+            backgroundChange("white", 0, "headerImage", "images/mountain.png");
+            currrentBackground++;
+            break;
+          case 4:
+            backgroundChange("white", 0, "headerImage", "images/nether.png");
+            currrentBackground = 0;
+            break;
+        }
+      }, 5000);
+    }
+
+    playBackgorundChange();
+  </script>
+
+  <section id="one">
+    <div  id="h2_one">
+        <h1>What is Minecraft?</h1>
+    </div>
+      <p> Minecraft is an open world sand-box, meaning you can so whatever you want in that world, from PvP to building in creative the possibilities are endless</p>
+    </div>
+  </section>
+
+  <section id="two">
+      <div id="sectionone">
+        <div class="col">
+          <h1>Minecraft Modes</h1>
+          <p>When you create a world in Minecraft, you a able to choose between 2 modes.</p>
+        </div>
+        <div id="sectionone_words">
+          <h2>Survival</h2>
+          <p>Test your knowlegde and skills in Minecrafts survival mode, to see how long you can last against the world.</p>
+      </div>
+      <div id="sectionone_words">
+          <h2>Creative</h2>
+          <p>Unleash your creative imagination with the power of Minecrafts unlimited resorces at your verey fingertips, in this mode you are god.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects section -->
+  <section id="three">
+    <div class="container">
+      <div class="row align-items-center projects" id="words_one">
+        <div class="col">
+          <h1>Minecraft Realms</h1>
+          <p id="words_two">
+            There three realms in Minecraft, each more challenging then the last.
+          </p>
+        </div>
+        <div class="row align-items-center" >
+          <div class="col-md-4">
+            <div class="card mb-3" id="one">
+              <img src="images/caveout.png" class="card-img-top img-fluid" alt="the Over World">
+              <div class="card-body">
+                <h5 class="card-title">the Over World</h5>
+                <div id="words_three">
+                  <p id="one" class="card-text underline-hover">During the day the Over World contains an abundance of recorses for your travels without being hassled, however, when night comes, the dead will rise</p>
+                </div>
+                <p class="card-text"><small class="text-muted">Some useful info</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3"  id="two">
+              <img src="images/nether.png" class="card-img-top img-fluid" alt="the Nether">
+              <div class="card-body">
+                <h5 class="card-title">the Nether</h5>
+                <div id="words_three">
+                  <p id="two" class="card-text underline-hover">The Nether, a crule and desilate waste land. Its only light is the lava around you, a vast majority of the land a plagued by the violent entities that will kill you, if unprepared (be wary of your suraoundings)</p>
+                </div>
+                <p class="card-text"><small class="text-muted">Some useful info</small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-3"  id="three">
+              <img src="images/ender.png" class="card-img-top img-fluid" alt="the End">
+              <div class="card-body">
+                <h5 class="card-title">the End</h5>
+                <div id="words_three">
+                  <p id="three" class="card-text underline-hover">The End, argueably the most challenging realm of the all, the End is home to the self consius Enderman but worst of all the Ender Dragon, This tirant of the skies will do anything to keep you at bay even throw you into the void below</p>
+                </div>
+                <p class="card-text"><small class="text-muted">Some useful info</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Projects Section -->
+<div class="con6">
+  <section id="four" class="content" >
+    <!-- Footer Section -->
+    <footer>
+      <div>
+          <h2>Esra duijzers</h2>
+          <p>who made the website</p>
+      </div>
+      
+      <div style="margin-top: 10px;">
+          <h4>Contact Us</h4>
+          <p>
+              Email: <a href="mailto:[beanzzz]">[esra.duijzers@tbc.school.nz]</a><br>
+          </p>
+      </div>
+      
+      <div style="margin-top: 20px;">
+          <p>© 2024 Monjang. All rights reserved to Monjang.</p>
+      </div>
+    </footer>
+  </section>
+</div>
+</body>
+
+</html>
