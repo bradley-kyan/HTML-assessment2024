@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    font-size: 105%;
 }
 
 /* Collapse edge margins */
@@ -9,44 +10,43 @@ body {
     justify-content: center;
     margin: 0;         
     padding: 0;
-    font-size: 24pt;
 }
 
-/**** Narbar ********************************/
+/**** Navbar ********************************/
 
+/* Navbar Links */
 a.nav-link {
-    font-size: 25px;
     color: #000000;
-    transition: tranform 2.5s;
+    transition: transform 2.5s;
 }
 
 a.nav-link:hover {
     color: #5f5f5f;
     text-decoration: underline;
-
 }
 
 /* Navbar Slide in items */
 .navbarItems {
-    border-bottom-right-radius: 40pb 5% ;
-    position: fixed;border-right: 2px solid #ffffff ;
+    border-bottom-right-radius: 40px 5%;
+    position: fixed;
+    border-right: 2px solid #ffffff;
     height: auto;
     width: 50vw;
     z-index: 10;    
     color: #ca0000;
-    font-size: 20px;
-    padding:40px 2%;
+    padding: 40px 2%;
     background-color: rgba(255, 255, 255, 0.918);
     transition: transform 0.2s;
 }
+
 /* Navbar slide in is open */
 .navbarOpen {
-    transform: translate(0,0);
+    transform: translate(0, 0);
 }
 
 /* Navbar slide in is closed */
 .navbarClosed {
-    transform: translate(-60vw,0); /* Position element off the screen on load */
+    transform: translate(-60vw, 0); /* Position element off the screen on load */
 }
 
 .contentDimmed {
@@ -69,173 +69,27 @@ a.nav-link:hover {
     z-index: 0;
 }
 
-div#burt {
+#burt {
     background-color: rgb(255, 255, 255) !important;
     margin-top: 0%;
-    
 }
 
 #nav-vision {
     background-color: rgb(255, 255, 255) !important;
-    
 }
 
 /**** Site Header & Footer *************************/
-  
-header#two {
-    font-size: 10px;
-    text-align:center ;
+
+header.header-one {
+    text-align: center;
     background-size: cover;
     background-position-y: -355px;
     background-color: #ffffff;
-    padding: 100px 5%;
     transition: 2.5s;
 }
 
-.logo {
-    max-width: 273px;
-    max-height: 40px;
-}
-/*text mechaniques for */
-div#words_one {
-    text-align: center;
-}
-
-div#words_three {
-    font-size: 20px;
-}
-
-/*hover effects foe section "Two"*/
-
-div#box1, div#box2, div#box3 {
-    transition: 0.5s;
-}
-
-div#box1:hover {
-    color: rgb(199, 38, 220);
-}
-
-div#box2:hover{
-    box-shadow: rgba(0, 0, 0, 0.4);
-    color: rgb(34, 205, 208);
-}
-
-div#box3:hover {
-    color: rgb(108, 108, 108);
-}
-
-div.container3{
-    text-decoration: none;
-    transform: translate(0,0) ;
-    transition: transform 4.4;
-}
-
-#words_three:hover {
-    translate: unset(200,4) ;
-    text-decoration: underline;
-}
-
-.underline-in-hover {
-    display: inline-block;
-}
-
-.underline-in-hover::after {
-    content: '';
-    width: 0px;
-    height: 1px;
-    display: block;
-    background: black;
-    transition: 2s;
-}
-
-.underline-in-hover:hover::after {
-    width: 100%;
-}
-
-.underline-hover {
-    display: inline-block;
-}
-
-.underline-hover::after {
-    content: '';
-    width: 100%;
-    height: 1px;
-    display: block;
-    background: rgba(0, 0, 0, 0);
-    transition: 1s;
-}
-
-.underline-hover:hover::after {
-    background: black;
-}
-
-/****sections*******************************/
-
-div#sectionone, section#three {
-    text-align: center;
-    padding-bottom: 40px;
-    border-bottom: 1px solid black;
-    margin-bottom: 100px;
-    padding: 200px;
-
-}
-div#h2_one {
-    font-size: larger;
-    padding: 40px;
-}
-
-div#sectionone_words{
-    padding: 30px;
-}
-
-div.col {
-    padding-bottom: 70px;
-}
-
-
-
-div#zero {
-    padding: 80px;
-}
-
-div#zero, div#one, div#two, div#three {
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
-    text-align: center;
-    transition: 0.5s;
-}
-/*hover functions***************/
-
-div#one:hover {
-    box-shadow: 20px 20px 20px rgba(35, 83, 13, 0.4);
-    color: #035e00;
-    background-color: #b6b6b6;
-    
-}
-
-div#two:hover {
-    box-shadow: 20px 20px 20px rgba(243, 85, 12, 0.4);
-    color: #c03a05;
-    background-color: #350000;
-
-}
-
-div#three:hover {
-    box-shadow: 20px 20px 20px rgba(247, 0, 255, 0.4);
-    color: #ad00cf;
-    background-color: #fcfa9f;
-}
-
-p#one, p#two, p#three {
-    font-family: 'Playfair_Display1';
-}
-
-
-/**** Site Header & Footer *************************/
-  
 #headerImage {
-    font-size: 10px;
-    text-align:center;
+    text-align: center;
     background-color: #ffffff;
     transition: 2.5s;
     height: 230px;
@@ -250,14 +104,102 @@ p#one, p#two, p#three {
     max-width: 273px;
     max-height: 40px;
 }
-/*text mechaniques for */
 
-.words_three {
-    font-size: 20px;
+/**** Sections *******************************/
+
+section.section-one {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+    margin: 20px;
+}
+
+section.section-two {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+    margin: 20px;
+}
+
+section.section-three {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+    margin-bottom: 100px;
+    padding: 50px;
+}
+
+.heading {
+    font-size: larger;
+    padding: 40px;
+}
+
+.container_padded {
+    padding: 30px;
+}
+
+div.col {
+    padding-bottom: 70px;
+}
+
+div.con6 {
+    background-color: #3c3c3c;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.card {
+    margin-bottom: 10px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.boss-image {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+/**** Hover Effects *************************/
+
+#box1, #box2, #box3 {
+    transition: 0.5s;
+}
+
+#box1:hover {
+    color: rgb(199, 38, 220);
+}
+
+#box2:hover {
+    box-shadow: rgba(0, 0, 0, 0.4);
+    color: rgb(34, 205, 208);
+}
+
+#box3:hover {
+    color: rgb(108, 108, 108);
+}
+
+.realm-card-1:hover {
+    box-shadow: 20px 20px 20px rgba(35, 83, 13, 0.4);
+    color: #035e00;
+}
+
+.realm-card-2:hover {
+    box-shadow: 20px 20px 20px rgba(243, 85, 12, 0.4);
+    color: #c03a05;
+    background-color: #350000;
+}
+
+.realm-card-3:hover {
+    box-shadow: 20px 20px 20px rgba(247, 0, 255, 0.4);
+    color: #ad00cf;
+    background-color: #fcfa9f;
 }
 
 .words_three:hover {
-    translate: unset(200,4) ;
+    translate: unset(200, 4);
     text-decoration: underline;
 }
 
@@ -295,71 +237,43 @@ p#one, p#two, p#three {
     background: black;
 }
 
-/****sections*******************************/
-
-section {
-    text-align: center;
-    padding-bottom: 40px;
-    border-bottom: 1px solid black;
-    margin: 20px;
-}
-
-.boss-image {
-    width: 100%;
-    height: 100%;
-    border: 2px solid black;
-    padding: 20px;
-}
-div.con6 {
-    background-color: #3c3c3c;
-    padding: 20px;
-    color: #ffffff;
-    text-align: center;
-} 
-
-p#weblink {
-    color: #0400ff;
-}
-
-p#weblink2 {
-    font-size: medium;
-}
-
-/**** Tablets and Bigger *************************/
+/**** Media Queries *************************/
 
 @media screen and (min-width: 768px) {
-    section {
+    section.section-one,
+    section.section-two,
+    section.section-three {
         padding-top: 50px 10%;
         padding-bottom: 50px 10%;
     }
 
     article {
-        width: 50%;         /* show as two columns */
+        width: 50%; /* show as two columns */
     }
 }
-
-/**** Large Desktops *************************/
 
 @media screen and (min-width: 1280px) {
-    section {
+    section.section-one,
+    section.section-two,
+    section.section-three {
         padding-top: 50px 10%;
         padding-bottom: 50px 10%;
     }
 
     article {
-        width: 25%;         /* show as four columns */
+        width: 25%; /* show as four columns */
     }
 }
 
-/**** Large Desktops *************************/
-
 @media screen and (min-width: 390px) {
-    section {
+    section.section-one,
+    section.section-two,
+    section.section-three {
         padding-top: 50px 10%;
         padding-bottom: 50px 10%;
     }
 
     article {
-        width: 25%;         /* show as four columns */
+        width: 25%; /* show as four columns */
     }
 }
