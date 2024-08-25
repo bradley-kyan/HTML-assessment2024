@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-
 <html lang="eng">
 
+<head>
+  <meta charset="UTF-8">
+  <title>Mining Away</title>
+  <meta name="author" content="Esra Dijures">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-
-
-  <head>
-    <meta charset="utf-8">
-
-    <title>Mining Away</title>
-    <meta name="author" content="Esra Dijures">
-
-    <meta charset="UTF-8">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-
-  </head>
-
   <header id="one">
     <!-- Navbar -->
     <nav class="navbar navbar-light bg-light fixed-top" id="nav-vision" style="z-index: 100; padding: 10px">
@@ -70,9 +62,9 @@
 
         </script>
       </div>
-    </nav>  
+    </nav>
   </header>
-  
+
   <!-- Navbar Items -->
   <div class="container navbarItems navbarClosed" id="navbarItems" style="z-index: 100; top:60px; padding-left: 20px;">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -92,10 +84,10 @@
         <a class="nav-link" href="index.html#section-four">PART FOUR</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="items.html">Items</a>
+        <a class="nav-link" href="items.html">Items</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link active" href="about.html">About</a>
       </li>
   </div>
   <div id="dimmer" onclick="toggleDim()"></div> <!-- Dimmer for dimming the background -->
@@ -105,7 +97,7 @@
   <nav>
     <img class="logo" src="images/ROG - Logo.png">
   </nav>
-  
+
   <div id="headerImage" style="background-image: url('images/ROG - Logo.png');" class="container-fluid">
   </div>
 
@@ -121,10 +113,10 @@
       var toggled = false;
       //Set the object that the event listener will be added to change the
       //background colour
-      setTimeout(function(){
+      setTimeout(function () {
         targetObj.style.backgroundColor = bgColour;
         toggled = true;
-        if(fgImage != null){
+        if (fgImage != null) {
           targetObj.style.backgroundImage = "url(" + fgImage + ")";
         }
       }, timer);
@@ -132,9 +124,9 @@
 
     var currrentBackground = 0;
 
-    function playBackgorundChange(){
-      setInterval(function(){
-        switch(currrentBackground){
+    function playBackgorundChange() {
+      setInterval(function () {
+        switch (currrentBackground) {
           case 0:
             backgroundChange("white", 0, "headerImage", "images/caveout.png");
             currrentBackground++;
@@ -156,21 +148,23 @@
 
   <section>
     <div>
-        <h1>About Us</h1>
+      <h1>About Us</h1>
     </div>
-      <p>This is a section about who we are</p>
+    <p>This is a section about who we are</p>
     </div>
   </section>
-    
+
   <section>
     <div>
-        <h1>Disclaimer</h1>
+      <h1>Disclaimer</h1>
     </div>
-      <p>This is a section about why we are not affiliated with Microsoft, Mojang and Minecraft. For copyright reasons it is best if you go the their Minecraft website: </p>
-      <p id="weblink">https://www.minecraft.net/en-us</p>
-      <p id="weblink2">(copy and paste the link)</p>
+    <p>This is a section about why we are not affiliated with Microsoft, Mojang and Minecraft. For copyright reasons it
+      is best if you go the their Minecraft website: </p>
+    <p id="weblink">https://www.minecraft.net/en-us</p>
+    <p id="weblink2">(copy and paste the link)</p>
     </div>
   </section>
-    
+
 </body>
+
 </html>

@@ -1,3 +1,15 @@
+/**** Fonts *************************/
+
+/* Roberto Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Use the same font for all elements */
+* {
+    font-family: boto Slab", serif;"Ro
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 /**** General Rules *************************/
 
 * {
@@ -239,7 +251,28 @@ div.con6 {
 
 /**** Media Queries *************************/
 
-@media screen and (min-width: 768px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 767px) {
+
+    section.section-one,
+    section.section-two,
+    section.section-three {
+        padding-top: 50px 10%;
+        padding-bottom: 50px 10%;
+    }
+
+    article {
+        width: 25%; /* show as four columns */
+    }
+
+    body {
+        background-color: blue;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
     section.section-one,
     section.section-two,
     section.section-three {
@@ -250,9 +283,14 @@ div.con6 {
     article {
         width: 50%; /* show as two columns */
     }
+
+    body {
+        background-color: green;
+    }
 }
 
-@media screen and (min-width: 1280px) {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
     section.section-one,
     section.section-two,
     section.section-three {
@@ -263,17 +301,8 @@ div.con6 {
     article {
         width: 25%; /* show as four columns */
     }
-}
 
-@media screen and (min-width: 390px) {
-    section.section-one,
-    section.section-two,
-    section.section-three {
-        padding-top: 50px 10%;
-        padding-bottom: 50px 10%;
-    }
-
-    article {
-        width: 25%; /* show as four columns */
+    body {
+        background-color: red;
     }
 }
